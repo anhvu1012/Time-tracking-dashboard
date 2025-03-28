@@ -15,8 +15,63 @@ $exercise-card: hsl(145, 58%, 55%);
 $social-card: hsl(264, 64%, 52%);
 $selfcare-card: hsl(43, 84%, 65%);
 
+@mixin mobile-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin header-color{
+  color: $header-color;
+}
+
 body{
   font-family: $font-stack;
   background-color: $main-bg;
   color: $text-color;
+}
+
+.profile-card {
+  .profile{
+    background-color: $profile;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 20px;
+
+    img{
+      height: 70px;
+      aspect-ratio: 1 / 1;
+      border: 3px solid $header-color;
+      border-radius: 50%;
+    }
+
+    div {
+      p {
+        margin: 5px 0;
+      }
+
+      h1{
+        margin: 5px 0;
+        font-size: 1.6em;
+        font-weight: 300;
+        @include header-color;
+      }
+    }
+  }
+
+  .time-options {
+    @include mobile-card;
+    padding: 30px;
+    border-radius: 20px;
+  }
+}
+
+.content-container {
+  background-color: $element-bg;
+
+  header, main {
+    @include mobile-card;
+  }
+
 }

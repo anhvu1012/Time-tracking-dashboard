@@ -2,4 +2,42 @@ body {
   font-family: Rubik, sans-serif;
   background-color: hsl(226, 43%, 10%);
   color: hsl(236, 100%, 87%);
+}
+
+.profile-card .profile {
+  background-color: hsl(246, 80%, 60%);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-radius: 20px;
+}
+.profile-card .profile img {
+  height: 70px;
+  aspect-ratio: 1/1;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+.profile-card .profile div p {
+  margin: 5px 0;
+}
+.profile-card .profile div h1 {
+  margin: 5px 0;
+  font-size: 1.6em;
+  font-weight: 300;
+  color: white;
+}
+.profile-card .time-options {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.content-container {
+  background-color: hsl(235, 46%, 20%);
+}
+.content-container header, .content-container main {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=styles.css.map */
