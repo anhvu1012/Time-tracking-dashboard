@@ -24,23 +24,37 @@ $selfcare-card: hsl(43, 84%, 65%);
   color: $header-color;
 }
 
+@mixin card-border{
+  border-radius: 15px;
+}
+
 body{
   font-family: $font-stack;
   background-color: $main-bg;
   color: $text-color;
 }
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+}
+
 .profile-card {
+  background-color: $element-bg;
+  @include card-border;
+
   .profile{
     background-color: $profile;
     padding: 30px;
     display: flex;
     align-items: center;
     gap: 20px;
-    border-radius: 20px;
+    @include card-border;
 
     img{
-      height: 70px;
+      height: 60px;
       aspect-ratio: 1 / 1;
       border: 3px solid $header-color;
       border-radius: 50%;
@@ -49,22 +63,25 @@ body{
     div {
       p {
         margin: 5px 0;
+        font-size: 0.85em;
       }
 
       h1{
         margin: 5px 0;
-        font-size: 1.6em;
+        font-size: 1.4em;
         font-weight: 300;
         @include header-color;
       }
     }
   }
 
-  .time-options {
-    @include mobile-card;
-    padding: 30px;
-    border-radius: 20px;
-  }
+  
+}
+
+.time-options {
+  @include mobile-card;
+  @include card-border;
+  padding: 20px 30px;
 }
 
 .content-container {
