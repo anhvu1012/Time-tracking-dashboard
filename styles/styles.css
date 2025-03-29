@@ -13,7 +13,7 @@ body {
 
 .profile-card {
   background-color: hsl(235, 46%, 20%);
-  border-radius: 15px;
+  border-radius: 10px;
 }
 .profile-card .profile {
   background-color: hsl(246, 80%, 60%);
@@ -21,7 +21,7 @@ body {
   display: flex;
   align-items: center;
   gap: 20px;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 .profile-card .profile img {
   height: 60px;
@@ -43,8 +43,36 @@ body {
 .time-options {
   display: flex;
   justify-content: space-between;
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 20px 30px;
+}
+
+.card .back {
+  display: flex;
+  justify-content: end;
+  border-radius: 10px;
+}
+.card .back img {
+  width: 60px;
+  margin-right: 30px;
+}
+.card .work {
+  background-color: hsl(15, 100%, 70%);
+}
+.card .play {
+  background-color: hsl(195, 74%, 62%);
+}
+.card .study {
+  background-color: hsl(348, 100%, 68%);
+}
+.card .exercise {
+  background-color: hsl(145, 58%, 55%);
+}
+.card .social {
+  background-color: hsl(264, 64%, 52%);
+}
+.card .self-care {
+  background-color: hsl(43, 84%, 65%);
 }
 
 .content-container {
