@@ -7,7 +7,6 @@ body {
 .main-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
   padding: 0 20px;
 }
 
@@ -43,18 +42,32 @@ body {
 .time-options {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-radius: 10px;
   padding: 20px 30px;
+}
+.time-options > * {
+  color: hsl(235, 45%, 61%);
+  cursor: pointer;
+}
+.time-options > *:hover {
+  color: white;
 }
 
 .card .back {
   display: flex;
   justify-content: end;
-  border-radius: 10px;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .card .back img {
-  width: 60px;
-  margin-right: 30px;
+  width: 70px;
+  height: 70px;
+  aspect-ratio: 1/1;
+  margin-right: 15px;
+  margin-top: -10px;
+  object-fit: contain;
 }
 .card .work {
   background-color: hsl(15, 100%, 70%);
@@ -74,11 +87,37 @@ body {
 .card .self-care {
   background-color: hsl(43, 84%, 65%);
 }
-
-.content-container {
+.card .content-container {
   background-color: hsl(235, 46%, 20%);
+  padding: 25px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  top: -25px;
 }
-.content-container header, .content-container main {
+.card .content-container:hover {
+  background-color: hsl(236, 37%, 36%);
+}
+.card .content-container header, .card .content-container main {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.card .content-container header span:first-child, .card .content-container main span:first-child {
+  color: white;
+}
+.card .content-container header {
+  margin-bottom: 8px;
+}
+.card .content-container header span:first-child {
+  font-size: 15px;
+  font-weight: 500;
+}
+.card .content-container main span:first-child {
+  font-size: 27px;
+  font-weight: 300;
+}
+.card .content-container main span:last-child {
+  font-size: 14px;
+  font-weight: 300;
 }/*# sourceMappingURL=styles.css.map */
