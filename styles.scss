@@ -17,10 +17,20 @@ $exercise-card: hsl(145, 58%, 55%);
 $social-card: hsl(264, 64%, 52%);
 $selfcare-card: hsl(43, 84%, 65%);
 
+@mixin column-layout{
+  display: flex;
+  flex-direction: column;
+}
+
 @mixin mobile-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@mixin desktop-card{
+  @include column-layout;
+  justify-content: space-between;
 }
 
 @mixin header-color{
@@ -36,27 +46,32 @@ $selfcare-card: hsl(43, 84%, 65%);
 }
 
 body{
+  margin: 0;
   font-family: $font-stack;
   background-color: $main-bg;
   color: $text-color;
+  display: flex;
+  height: auto;
+  width: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-container {
-  display: flex;
-  flex-direction: column;
-  padding: 0 20px;
+  @include column-layout;
 }
 
 .profile-card {
   background-color: $element-bg;
   @include card-border;
+  margin-bottom: 25px;
+  grid-area: profile;
 
   .profile{
     background-color: $profile;
     padding: 30px;
     display: flex;
     align-items: center;
-    gap: 20px;
     @include card-border;
 
     img{
@@ -64,6 +79,7 @@ body{
       aspect-ratio: 1 / 1;
       border: 3px solid $header-color;
       border-radius: 50%;
+      margin-right: 20px;
     }
 
     div {
@@ -80,12 +96,10 @@ body{
       }
     }
   }
-
-  
 }
 
 .time-options {
-  @include mobile-card;
+  // @include card;
   @include card-border;
   padding: 20px 30px;
 
@@ -118,21 +132,27 @@ body{
   }
   .work{
     background-color: $work-card;
+    grid-area: work;
   }
   .play{
     background-color: $play-card;
+    grid-area: play;
   }
   .study{
     background-color: $study-card;
+    grid-area: study;
   }
   .exercise{
     background-color: $exercise-card;
+    grid-area: exercise;
   }
   .social {
     background-color: $social-card;
+    grid-area: social;
   }
   .self-care{
     background-color: $selfcare-card;
+    grid-area: self-care;
   }
 
   .content-container {
@@ -173,5 +193,90 @@ body{
         font-weight: 300;
       }
     }  
+  }
+}
+
+// responsive
+@media screen and (max-width: 900px){
+  body {
+    padding: 80px 0 60px;
+  }
+
+  .time-options {
+    @include mobile-card;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  html, body{
+    height: 100%;
+  }
+  .main-container{
+    display: grid;
+    grid-template: 
+      'profile work play study'
+      'profile exercise social self-care';
+    column-gap: 25px;
+  }
+
+  .profile-card{
+    .profile{
+      @include desktop-card;
+      align-items: flex-start;
+      padding: 25px;
+      img{
+        height: 50px;
+        margin-bottom: 20px;
+      }
+  
+      div {
+        p {
+          font-size: 0.7em;
+        }
+  
+        h1{
+          font-size: 1.9em;
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+  
+  .time-options{
+    @include desktop-card;
+    gap: 15px;
+    padding: 20px 25px;
+  }
+
+  .card{
+    width: 190px;   
+    @include desktop-card;
+
+    .content-container {
+      position: relative;
+      // top: -25px;
+
+      header{
+        margin-bottom: 20px;
+        span:first-child{
+          font-size: 13px;
+        }
+        img{
+          width: 15px;
+        }
+      }
+  
+      main{
+        @include column-layout;
+        align-items: flex-start;
+        gap: 8px;
+        span:first-child {
+          font-size: 40px;
+        }
+        span:last-child{
+          font-size: 12px;
+        }
+      }  
+    }
   }
 }

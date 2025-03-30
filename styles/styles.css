@@ -1,25 +1,31 @@
 body {
+  margin: 0;
   font-family: Rubik, sans-serif;
   background-color: hsl(226, 43%, 10%);
   color: hsl(236, 100%, 87%);
+  display: flex;
+  height: auto;
+  width: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-container {
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
 }
 
 .profile-card {
   background-color: hsl(235, 46%, 20%);
   border-radius: 10px;
+  margin-bottom: 25px;
+  grid-area: profile;
 }
 .profile-card .profile {
   background-color: hsl(246, 80%, 60%);
   padding: 30px;
   display: flex;
   align-items: center;
-  gap: 20px;
   border-radius: 10px;
 }
 .profile-card .profile img {
@@ -27,6 +33,7 @@ body {
   aspect-ratio: 1/1;
   border: 3px solid white;
   border-radius: 50%;
+  margin-right: 20px;
 }
 .profile-card .profile div p {
   margin: 5px 0;
@@ -40,9 +47,6 @@ body {
 }
 
 .time-options {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   border-radius: 10px;
   padding: 20px 30px;
 }
@@ -71,21 +75,27 @@ body {
 }
 .card .work {
   background-color: hsl(15, 100%, 70%);
+  grid-area: work;
 }
 .card .play {
   background-color: hsl(195, 74%, 62%);
+  grid-area: play;
 }
 .card .study {
   background-color: hsl(348, 100%, 68%);
+  grid-area: study;
 }
 .card .exercise {
   background-color: hsl(145, 58%, 55%);
+  grid-area: exercise;
 }
 .card .social {
   background-color: hsl(264, 64%, 52%);
+  grid-area: social;
 }
 .card .self-care {
   background-color: hsl(43, 84%, 65%);
+  grid-area: self-care;
 }
 .card .content-container {
   background-color: hsl(235, 46%, 20%);
@@ -120,4 +130,80 @@ body {
 .card .content-container main span:last-child {
   font-size: 14px;
   font-weight: 300;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    padding: 80px 0 60px;
+  }
+  .time-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 900px) {
+  html, body {
+    height: 100%;
+  }
+  .main-container {
+    display: grid;
+    grid-template: "profile work play study" "profile exercise social self-care";
+    column-gap: 25px;
+  }
+  .profile-card .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 25px;
+  }
+  .profile-card .profile img {
+    height: 50px;
+    margin-bottom: 20px;
+  }
+  .profile-card .profile div p {
+    font-size: 0.7em;
+  }
+  .profile-card .profile div h1 {
+    font-size: 1.9em;
+    margin-bottom: 40px;
+  }
+  .time-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px 25px;
+  }
+  .card {
+    width: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card .content-container {
+    position: relative;
+  }
+  .card .content-container header {
+    margin-bottom: 20px;
+  }
+  .card .content-container header span:first-child {
+    font-size: 13px;
+  }
+  .card .content-container header img {
+    width: 15px;
+  }
+  .card .content-container main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .card .content-container main span:first-child {
+    font-size: 40px;
+  }
+  .card .content-container main span:last-child {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=styles.css.map */
