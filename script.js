@@ -1,3 +1,7 @@
+const dataSource = './data.json';
+let allValidData = [];
+
+const allTimeOptions = Array.from(document.querySelectorAll('.btn'));
 const dailyOption = document.getElementById('daily');
 const weeklyOption = document.getElementById('weekly');
 const monthlyOption = document.getElementById('monthly');
@@ -20,37 +24,56 @@ const createContainer = (item, timeframeObj) => {
       <img src="images/icon-ellipsis.svg" alt="more icon" />
     </header>
     <main>
-      <span>${timeframeObj.current}</span>
+      <span>${timeframeObj.current}hrs</span>
       <span>Previous - ${timeframeObj.previous}hrs</span>
     </main>
   `;
-
   containers.push(container);
-  
-  // displayContainers(containers);
 };
 
 const populateDOM = (data, targetId) => {
   data.forEach(item => {
-    createContainer(item, item.timeframes[`${targetId}`]);
+    createContainer(item, item.timeframes[targetId]);
   });
 
-  // console.log(containers);
   displayContainers(containers);
 };
+
+const fetchData = async () => {
+  try {
+    const response = await fetch(dataSource);
+    const data = await response.json();
+    allValidData = data;
+  } catch (error) {
+    console.error('Error fetching JSON file: ', err);
+  }
+}
+
+const addActiveClass = (targetId) => {
+  // console.log(allTimeOptions);
+  allTimeOptions.forEach(option => option.classList.remove('active'));
+
+  const target = allTimeOptions.find(option => option.id === targetId);
+  // console.log(target);
+  target.classList.add('active');
+}
 
 const handleTimeOption = (e) => {
   e.preventDefault();
   containers = [];
   const targetId = e.target.id;
 
-  fetch('./data.json')
-  .then((response) => response.json())
-  .then((data) => populateDOM(data, targetId))
-  .catch((err) => {
-    console.error('Error fetching JSON file: ', err);
-  });
+  addActiveClass(targetId);
+
+  populateDOM(allValidData, targetId);
 };
+
+fetchData();
+
+window.addEventListener('load', () => {
+  populateDOM(allValidData, 'weekly');
+  addActiveClass('weekly');
+});
 
 dailyOption.addEventListener('click', handleTimeOption);
 weeklyOption.addEventListener('click', handleTimeOption);

@@ -50,13 +50,16 @@ body {
   border-radius: 10px;
   padding: 20px 30px;
 }
-.time-options > * {
+.time-options .btn {
   color: hsl(235, 45%, 61%);
   background-color: hsl(235, 46%, 20%);
   border: none;
   cursor: pointer;
 }
-.time-options > *:hover {
+.time-options .btn:hover {
+  color: white;
+}
+.time-options .active {
   color: white;
 }
 

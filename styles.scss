@@ -103,7 +103,7 @@ body{
   @include card-border;
   padding: 20px 30px;
 
-  >* {
+  .btn {
     color: $time-option;
     background-color: $element-bg;
     border: none;
@@ -113,7 +113,12 @@ body{
       color: $text-hover;
     }
   }
+  
+  .active{
+    color: $text-hover;
+  }
 }
+
 
 .card {
   .back{
