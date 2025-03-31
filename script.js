@@ -21,7 +21,7 @@ const createContainer = (item, timeframeObj) => {
     </header>
     <main>
       <span>${timeframeObj.current}</span>
-      <span>Previous - ${timeframeObj.previous}</span>
+      <span>Previous - ${timeframeObj.previous}hrs</span>
     </main>
   `;
 

@@ -246,6 +246,7 @@ body{
   
   .time-options{
     @include desktop-card;
+    align-items: flex-start;
     gap: 15px;
     padding: 20px 25px;
   }

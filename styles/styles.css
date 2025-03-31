@@ -175,6 +175,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-start;
     gap: 15px;
     padding: 20px 25px;
   }
