@@ -52,6 +52,8 @@ body {
 }
 .time-options > * {
   color: hsl(235, 45%, 61%);
+  background-color: hsl(235, 46%, 20%);
+  border: none;
   cursor: pointer;
 }
 .time-options > *:hover {

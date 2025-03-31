@@ -105,6 +105,8 @@ body{
 
   >* {
     color: $time-option;
+    background-color: $element-bg;
+    border: none;
     cursor: pointer;
 
     &:hover{
