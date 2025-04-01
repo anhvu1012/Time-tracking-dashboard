@@ -48,12 +48,12 @@
 .card .content-container:hover {
   background-color: hsl(236, 37%, 36%);
 }
-.card .content-container header, .card .content-container main {
+.card .content-container header, .card .content-container section {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.card .content-container header span:first-child, .card .content-container main span:first-child {
+.card .content-container header span:first-child, .card .content-container section span:first-child {
   color: white;
 }
 .card .content-container header {
@@ -63,11 +63,11 @@
   font-size: 15px;
   font-weight: 500;
 }
-.card .content-container main span:first-child {
+.card .content-container section span:first-child {
   font-size: 27px;
   font-weight: 300;
 }
-.card .content-container main span:last-child {
+.card .content-container section span:last-child {
   font-size: 14px;
   font-weight: 300;
 }
@@ -200,16 +200,16 @@ body {
   .card .content-container header img {
     width: 15px;
   }
-  .card .content-container main {
+  .card .content-container section {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
   }
-  .card .content-container main span:first-child {
+  .card .content-container section span:first-child {
     font-size: 40px;
   }
-  .card .content-container main span:last-child {
+  .card .content-container section span:last-child {
     font-size: 12px;
   }
 }/*# sourceMappingURL=styles.css.map */

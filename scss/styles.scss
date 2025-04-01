@@ -92,7 +92,7 @@ body{
         }
       }
   
-      main{
+      section{
         @include column-layout;
         align-items: flex-start;
         gap: 8px;
