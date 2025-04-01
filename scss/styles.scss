@@ -59,7 +59,7 @@ body{
           font-size: 0.7em;
         }
   
-        h1{
+        h2{
           font-size: 1.9em;
           margin-bottom: 40px;
         }
@@ -82,7 +82,8 @@ body{
       position: relative;
       // top: -25px;
 
-      header{
+      h2{
+        margin: 0;
         margin-bottom: 20px;
         span:first-child{
           font-size: 13px;

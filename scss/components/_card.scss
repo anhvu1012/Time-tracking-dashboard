@@ -56,14 +56,15 @@
       background-color: $card-hover;
     }
 
-    header, section {
+    h2, section {
       @include mobile-card;
       span:first-child{
         color: $header-color;
       }
     }
 
-    header{
+    h2{
+      margin: 0;
       margin-bottom: 8px;
       span:first-child{
         font-size: 15px;

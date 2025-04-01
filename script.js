@@ -19,10 +19,10 @@ const displayContainers = (containers) => {
 const createContainer = (item, timeframeObj) => {
   const container = 
   `
-    <header>
+    <h2>
       <span>${item.title}</span>
       <img src="images/icon-ellipsis.svg" alt="more icon" />
-    </header>
+    </h2>
     <section>
       <span>${timeframeObj.current}hrs</span>
       <span>Previous - ${timeframeObj.previous}hrs</span>

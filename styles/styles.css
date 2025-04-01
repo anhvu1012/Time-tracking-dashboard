@@ -48,18 +48,19 @@
 .card .content-container:hover {
   background-color: hsl(236, 37%, 36%);
 }
-.card .content-container header, .card .content-container section {
+.card .content-container h2, .card .content-container section {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.card .content-container header span:first-child, .card .content-container section span:first-child {
+.card .content-container h2 span:first-child, .card .content-container section span:first-child {
   color: white;
 }
-.card .content-container header {
+.card .content-container h2 {
+  margin: 0;
   margin-bottom: 8px;
 }
-.card .content-container header span:first-child {
+.card .content-container h2 span:first-child {
   font-size: 15px;
   font-weight: 500;
 }
@@ -96,7 +97,7 @@
   margin: 5px 0;
   font-size: 0.85em;
 }
-.profile-card .profile div h1 {
+.profile-card .profile div h2 {
   margin: 5px 0;
   font-size: 1.4em;
   font-weight: 300;
@@ -170,7 +171,7 @@ body {
   .profile-card .profile div p {
     font-size: 0.7em;
   }
-  .profile-card .profile div h1 {
+  .profile-card .profile div h2 {
     font-size: 1.9em;
     margin-bottom: 40px;
   }
@@ -191,13 +192,14 @@ body {
   .card .content-container {
     position: relative;
   }
-  .card .content-container header {
+  .card .content-container h2 {
+    margin: 0;
     margin-bottom: 20px;
   }
-  .card .content-container header span:first-child {
+  .card .content-container h2 span:first-child {
     font-size: 13px;
   }
-  .card .content-container header img {
+  .card .content-container h2 img {
     width: 15px;
   }
   .card .content-container section {
