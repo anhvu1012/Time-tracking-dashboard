@@ -1,0 +1,23 @@
+@import '../variables/variable';
+@import '../mixins/mixins';
+
+.time-options {
+  // @include card;
+  @include card-border;
+  padding: 20px 30px;
+
+  .btn {
+    color: $time-option;
+    background-color: $element-bg;
+    border: none;
+    cursor: pointer;
+
+    &:hover{
+      color: $text-hover;
+    }
+  }
+  
+  .active{
+    color: $text-hover;
+  }
+}

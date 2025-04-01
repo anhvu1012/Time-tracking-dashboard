@@ -1,0 +1,39 @@
+@import '../variables/variable';
+@import '../mixins/mixins';
+
+.profile-card {
+  background-color: $element-bg;
+  @include card-border;
+  margin-bottom: 25px;
+  grid-area: profile;
+
+  .profile{
+    background-color: $profile;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    @include card-border;
+
+    img{
+      height: 60px;
+      aspect-ratio: 1 / 1;
+      border: 3px solid $header-color;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    div {
+      p {
+        margin: 5px 0;
+        font-size: 0.85em;
+      }
+
+      h1{
+        margin: 5px 0;
+        font-size: 1.4em;
+        font-weight: 300;
+        @include header-color;
+      }
+    }
+  }
+}

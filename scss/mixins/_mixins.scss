@@ -1,0 +1,27 @@
+@mixin column-layout{
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin mobile-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin desktop-card{
+  @include column-layout;
+  justify-content: space-between;
+}
+
+@mixin header-color{
+  color: $header-color;
+}
+
+@mixin card-border{
+  border-radius: 10px;
+}
+
+@mixin card-padding{
+  padding: 25px 20px;
+}

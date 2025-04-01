@@ -1,68 +1,3 @@
-body {
-  margin: 0;
-  font-family: Rubik, sans-serif;
-  background-color: hsl(226, 43%, 10%);
-  color: hsl(236, 100%, 87%);
-  display: flex;
-  height: auto;
-  width: auto;
-  justify-content: center;
-  align-items: center;
-}
-
-.main-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.profile-card {
-  background-color: hsl(235, 46%, 20%);
-  border-radius: 10px;
-  margin-bottom: 25px;
-  grid-area: profile;
-}
-.profile-card .profile {
-  background-color: hsl(246, 80%, 60%);
-  padding: 30px;
-  display: flex;
-  align-items: center;
-  border-radius: 10px;
-}
-.profile-card .profile img {
-  height: 60px;
-  aspect-ratio: 1/1;
-  border: 3px solid white;
-  border-radius: 50%;
-  margin-right: 20px;
-}
-.profile-card .profile div p {
-  margin: 5px 0;
-  font-size: 0.85em;
-}
-.profile-card .profile div h1 {
-  margin: 5px 0;
-  font-size: 1.4em;
-  font-weight: 300;
-  color: white;
-}
-
-.time-options {
-  border-radius: 10px;
-  padding: 20px 30px;
-}
-.time-options .btn {
-  color: hsl(235, 45%, 61%);
-  background-color: hsl(235, 46%, 20%);
-  border: none;
-  cursor: pointer;
-}
-.time-options .btn:hover {
-  color: white;
-}
-.time-options .active {
-  color: white;
-}
-
 .card .back {
   display: flex;
   justify-content: end;
@@ -135,6 +70,71 @@ body {
 .card .content-container main span:last-child {
   font-size: 14px;
   font-weight: 300;
+}
+
+.profile-card {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 10px;
+  margin-bottom: 25px;
+  grid-area: profile;
+}
+.profile-card .profile {
+  background-color: hsl(246, 80%, 60%);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+.profile-card .profile img {
+  height: 60px;
+  aspect-ratio: 1/1;
+  border: 3px solid white;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.profile-card .profile div p {
+  margin: 5px 0;
+  font-size: 0.85em;
+}
+.profile-card .profile div h1 {
+  margin: 5px 0;
+  font-size: 1.4em;
+  font-weight: 300;
+  color: white;
+}
+
+.time-options {
+  border-radius: 10px;
+  padding: 20px 30px;
+}
+.time-options .btn {
+  color: hsl(235, 45%, 61%);
+  background-color: hsl(235, 46%, 20%);
+  border: none;
+  cursor: pointer;
+}
+.time-options .btn:hover {
+  color: white;
+}
+.time-options .active {
+  color: white;
+}
+
+body {
+  margin: 0;
+  font-family: Rubik, sans-serif;
+  background-color: hsl(226, 43%, 10%);
+  color: hsl(236, 100%, 87%);
+  display: flex;
+  height: auto;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 900px) {

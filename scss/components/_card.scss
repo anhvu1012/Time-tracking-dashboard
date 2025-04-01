@@ -1,0 +1,85 @@
+@import '../variables/variable';
+@import '../mixins/mixins';
+
+.card {
+  .back{
+    display: flex;
+    justify-content: end;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    img{
+      width: 70px;
+      height: 70px;
+      aspect-ratio: 1 / 1;
+      margin-right: 15px;
+      margin-top: -10px;
+      object-fit: contain;
+    }
+  }
+  .work{
+    background-color: $work-card;
+    grid-area: work;
+  }
+  .play{
+    background-color: $play-card;
+    grid-area: play;
+  }
+  .study{
+    background-color: $study-card;
+    grid-area: study;
+  }
+  .exercise{
+    background-color: $exercise-card;
+    grid-area: exercise;
+  }
+  .social {
+    background-color: $social-card;
+    grid-area: social;
+  }
+  .self-care{
+    background-color: $selfcare-card;
+    grid-area: self-care;
+  }
+
+  .content-container {
+    background-color: $element-bg;
+    @include card-padding;
+    @include card-border;
+    cursor: pointer;
+
+    position: relative;
+    top: -25px;
+  
+    &:hover{
+      background-color: $card-hover;
+    }
+
+    header, main {
+      @include mobile-card;
+      span:first-child{
+        color: $header-color;
+      }
+    }
+
+    header{
+      margin-bottom: 8px;
+      span:first-child{
+        font-size: 15px;
+        font-weight: 500;
+      }
+    }
+
+    main{
+      span:first-child {
+        font-size: 27px;
+        font-weight: 300;
+      }
+      span:last-child{
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }  
+  }
+}
