@@ -70,7 +70,8 @@ const handleTimeOption = (e) => {
 
 fetchData();
 
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  await fetchData(); // Ensure data is fetched before populating
   populateDOM(allValidData, 'weekly');
   addActiveClass('weekly');
 });
